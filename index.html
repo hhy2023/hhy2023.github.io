@@ -148,6 +148,48 @@
 
 </head>
 <body>
+<div>
+	<center>
+	<p><span id="showuser1"></span>&nbsp<span id="ip1"></span>&nbsp<span id="province1"></span>&nbsp<span id="city1"></span>&nbsp<span id="isp1"></span>&nbsp<span id="end"></span></p>
+	                        <script>
+		                        // 使用免费的ipify API获取访客的IP地址
+		                        fetch('https://api.ipify.org/?format=json')
+			                        .then(response => response.json())
+			                        .then(data => {
+			                                let ip_add = data.ip;
+			                                let url_get="https://www.fkcoder.com/ip?ip=";
+			                                let url_add=url_get+ip_add;
+						        document.getElementById('showuser1').textContent = "欢迎来自：";
+				                        document.getElementById('ip1').textContent = data.ip;
+			                                // 使用免费的API获取访客的归属地
+			                                fetch(url_add)
+			                                .then(response => response.json())
+			                                .then(data => {
+                                                        if(data.province!='0'){
+			                                document.getElementById('province1').textContent = data.province;
+                                      }
+                                                        if(data.city!='0'){
+			                                document.getElementById('city1').textContent = data.city;
+                                      }
+                                                        if(data.isp!='0'){
+			                                document.getElementById('isp1').textContent = data.isp;
+                                      }
+	                                                document.getElementById('end').textContent = "的用户";
+			                                })
+			                        .catch(error => console.error(error));
+			                        })
+			                        .catch(error => console.error(error));
+					         setTimeout(function() {
+                                                 document.getElementById('showuser1').textContent = "";
+			                         document.getElementById('ip1').textContent ="";
+                                                 document.getElementById('province1').textContent = "";
+			                         document.getElementById('city1').textContent ="";
+                                                 document.getElementById('isp1').textContent = "";
+			                         document.getElementById('end').textContent ="";
+                       }, 8000);
+	                        </script>
+	</center>
+</div>
     <div class="animation-wrapper">
         <div class="particle particle-1"></div>
         <div class="particle particle-2"></div>
@@ -160,8 +202,54 @@
                 <h1>欢迎雨欣光临~</h1>
                 <div class="content">
                     <div class="content-top">
+                        <h2>本站导航</h2>
+                        <ul>
+                            <li>
+                                雨欣导航
+                                <div class="link">
+                                    <div style="color:#02a982">https://qyx.one</div>
+                                    <div class="go"><a href="https://qyx.one/" target="_blank">点击进入</a></div>
+                                </div>
 
-                        <h2>游戏列表</h2>
+                            </li>
+                            <li>
+                                雨欣搜索
+                                <div class="link">
+                                    <div style="color:#02a982">https://010818.xyz</div>
+                                    <div class="go"><a href="https://010818.xyz" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                             <li>
+                                Mister.Hu博客
+                                <div class="link">
+                                    <div style="color:#02a982">https://hhyblog.top</div>
+                                    <div class="go"><a href="https://hhyblog.top" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+				<li>
+                                chatGPT-QYX内测
+                                <div class="link">
+                                    <div style="color:#02a982">https://chatgpt.qyx.one/</div>
+                                    <div class="go"><a href="https://chatgpt.qyx.one" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+				<li>
+                                Mister.Hu的博客（备用站点）
+                                <div class="link">
+                                    <div style="color:#02a982">https://blog.qyx.one/</div>
+                                    <div class="go"><a href="https://zlzlme.eu.org" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                          <li>
+                            雨欣编辑器
+                            <div class="link">
+                                    <div style="color:#02a982">https://qyx.one/edit</div>
+                                    <div class="go"><a href="https://qyx.one/edit" target="_blank">点击进入</a></div>
+                                </div>
+                          </ul>
+                        <h2>游戏列表For QYX</h2>
                         <ul>
                             <li>
                                 五子棋1.0
@@ -207,6 +295,286 @@
                                     <div style="color:#02a982">欢迎访问主页</div>
                                     <div class="go"><a href="https://qyx.one/" target="_blank">点击进入</a></div>
                                 </div>
+                          </ul>
+			    <h2>电影电视剧免费看</h2>
+                        <ul>
+                            <li>
+                                白狐影视
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.bhxoxo.com/</div>
+                                    <div class="go"><a href="https://www.bhxoxo.com/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                小狗影院
+                                <div class="link">
+                                    <div style="color:#02a982">https://jinmantv.com/</div>
+                                    <div class="go"><a href="https://jinmantv.com/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                HDmoli影视                             
+								   <div class="link">
+                                    <div style="color:#02a982">https://www.hdmoli.com/</div>
+                                    <div class="go"><a href="https://www.hdmoli.com/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                 搜片TV
+                                <div class="link">
+                                    <div style="color:#02a982">https://soupian.tv/</div>
+                                    <div class="go"><a href="https://soupian.tv/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                雪糕TV
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.xgitv.com/</div>
+                                    <div class="go"><a href="https://www.xgitv.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 高清影视库
+                                <div class="link">
+                                    <div style="color:#02a982">https://1080zyk3.com/</div>
+                                    <div class="go"><a href="https://1080zyk3.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 注视影视
+                                <div class="link">
+                                    <div style="color:#02a982">https://gaze.run/</div>
+                                    <div class="go"><a href="https://gaze.run/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 高端影视
+                                <div class="link">
+                                    <div style="color:#02a982">https://ddys.art/</div>
+                                    <div class="go"><a href="https://ddys.art/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 电影先生
+                                <div class="link">
+                                    <div style="color:#02a982">https://dianyi.ng/</div>
+                                    <div class="go"><a href="https://dianyi.ng/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                豌豆搜电影
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.wandou.la/</div>
+                                    <div class="go"><a href="https://www.wandou.la/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 4K美剧片库
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.4khdr.cn/</div>
+                                    <div class="go"><a href="https://www.4khdr.cn/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                          </ul>
+                        <br>                        
+                        <h2>动漫番剧漫画免费看</h2>
+                        <ul>
+                            <li>
+                                AGE动漫
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.agemys.vip/</div>
+                                    <div class="go"><a href="https://www.agemys.vip/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                樱花动漫
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.yhdmz.org/</div>
+                                    <div class="go"><a href="https://www.yhdmz.org/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                樱花动漫(备用)                             
+								   <div class="link">
+                                    <div style="color:#02a982">https://yhdm6.top/</div>
+                                    <div class="go"><a href="https://yhdm6.top/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                 Z动漫
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.dm2022.com/</div>
+                                    <div class="go"><a href="https://www.dm2022.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 萌番
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.mfan.tv/</div>
+                                    <div class="go"><a href="https://www.mfan.tv/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 哈哩哈哩
+                                <div class="link">
+                                    <div style="color:#02a982">http://haliyy.com/</div>
+                                    <div class="go"><a href="http://haliyy.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 柒之社动漫
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.07vod.fun/</div>
+                                    <div class="go"><a href="https://www.07vod.fun/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 漫社
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.ysjdm.net/</div>
+                                    <div class="go"><a href="https://www.ysjdm.net/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 AnFuns
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.anfuns.cc/</div>
+                                    <div class="go"><a href="https://www.anfuns.cc/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+
+                            <li>
+                                 动漫岛
+                                <div class="link">
+                                    <div style="color:#02a982">http://www.dmd85.com/</div>
+                                    <div class="go"><a href="http://www.dmd85.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                动漫岛(备用)
+                                <div class="link">
+                                    <div style="color:#02a982">http://www.88dmw.com/</div>
+                                    <div class="go"><a href="http://www.88dmw.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 怡萱动漫
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.yxdmlove.com/</div>
+                                    <div class="go"><a href="https://www.yxdmlove.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 SiliSili动漫
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.silisili.tv/</div>
+                                    <div class="go"><a href="https://www.silisili.tv/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+<li>
+                                 妮可动漫
+                                <div class="link">
+                                    <div style="color:#02a982">http://www.nicotv.me/</div>
+                                    <div class="go"><a href="http://www.nicotv.me/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 漫报社
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.mangabz.com/</div>
+                                    <div class="go"><a href="https://www.mangabz.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 komiic漫画
+                                <div class="link">
+                                    <div style="color:#02a982">https://komiic.com/</div>
+                                    <div class="go"><a href="https://komiic.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 漫画之家
+                                <div class="link">
+                                    <div style="color:#02a982">http://manhua.dmzj.com/</div>
+                                    <div class="go"><a href="http://manhua.dmzj.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 拷贝漫画
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.copymanga.site/</div>
+                                    <div class="go"><a href="https://www.copymanga.site/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 漫画狗
+                                <div class="link">
+                                    <div style="color:#02a982">https://dogemanga.com/</div>
+                                    <div class="go"><a href="https://dogemanga.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 漫画帮
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.manhuadb.com/</div>
+                                    <div class="go"><a href="https://www.manhuadb.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                 包子漫画
+                                <div class="link">
+                                    <div style="color:#02a982">https://cn.baozimh.com/</div>
+                                    <div class="go"><a href="https://cn.baozimh.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                          </ul>
+                        <br>                        
+                        <h2>音乐免费听免费下载</h2>
+                        <ul>
+                            <li>
+                                铜钟
+                                <div class="link">
+                                    <div style="color:#02a982">https://tonzhon.com/</div>
+                                    <div class="go"><a href="https://tonzhon.com/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                下歌吧平台
+                                <div class="link">
+                                    <div style="color:#02a982">https://music.y444.cn/</div>
+                                    <div class="go"><a href="https://music.y444.cn/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                MyFreeMp3                             
+								   <div class="link">
+                                    <div style="color:#02a982">https://tool.liumingye.cn/music/</div>
+                                    <div class="go"><a href="https://tool.liumingye.cn/music/" target="_blank">点击进入</a></div>
+                                </div>
+
+                            </li>
+                            <li>
+                                 百乐米
+                                <div class="link">
+                                    <div style="color:#02a982">https://bailemi.com/</div>
+                                    <div class="go"><a href="https://bailemi.com/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>
+                            <li>
+                                全网音乐搜索器
+                                <div class="link">
+                                    <div style="color:#02a982">https://www.yeyulingfeng.com/tools/music/</div>
+                                    <div class="go"><a href="https://www.yeyulingfeng.com/tools/music/" target="_blank">点击进入</a></div>
+                                </div>
+                            </li>	
                           </ul>
                     </div>
                 </div>
